@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/01 01:03:13 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/07/11 08:13:06 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/13 20:35:53 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ and a zero value if not.
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 255)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

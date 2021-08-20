@@ -6,11 +6,9 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 14:02:32 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/07/11 08:11:11 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:08:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /* checks for an alphanumeric character;
 it is equivalent to (isalpha(c) || isdigit(c)).

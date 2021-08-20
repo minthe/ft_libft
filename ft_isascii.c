@@ -6,11 +6,9 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/01 01:03:13 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/13 20:35:53 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:07:55 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /* checks whether c is a 7-bit unsigned char value
 that fits into the ASCII character set.

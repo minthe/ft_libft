@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 12:23:10 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/11 23:26:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:10:06 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int counter;
-	
+	int	counter;
+
 	counter = 0;
-	while(s[counter])
+	while (s[counter])
 	{
 		ft_putchar_fd(s[counter], fd);
 		counter++;

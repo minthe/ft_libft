@@ -6,11 +6,9 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 17:13:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/11 23:28:27 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:07:39 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /* checks for any printable character including space. */
 
@@ -22,9 +20,10 @@ int	ft_isprint(int c)
 		return (0);
 }
 
+/*
+
 #include <stdio.h>
 
-/*
 int	main(void)
 {
 	int	temp; // DELETE MAIN

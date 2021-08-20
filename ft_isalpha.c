@@ -6,11 +6,9 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 19:10:03 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/07/11 08:09:42 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:08:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

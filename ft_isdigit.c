@@ -6,11 +6,9 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 19:46:45 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/07/11 08:09:17 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:07:49 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

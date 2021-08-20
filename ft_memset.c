@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 08:54:41 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/14 15:29:03 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:08:58 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 /* The memset() function fills the first n bytes of the memory area
 pointed to by s with the constant byte c. */
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t counter;
-	
+	size_t	counter;
+
 	counter = 0;
 	while (counter < n)
 	{

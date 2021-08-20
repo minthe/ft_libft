@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/12 16:42:08 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/21 00:09:52 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2021/08/20 16:40:00 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2021/08/21 00:04:43 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	*ft_memmove(void *dest, const void *source, size_t num)
 {
-	int	temp;
+	size_t	i;
 
-	temp = n;
-	if (n == -2147483648)
+	i = 0;
+	if (!dest && !source)
+		return (NULL);
+	if (dest > source)
 	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
+		while (num)
+		{
+			num--;
+			((unsigned char *)dest)[num] = ((unsigned char *)source)[num];
+		}
 	}
-	if (temp < 0)
-	{
-		ft_putchar_fd('-', fd);
-		temp *= -1;
-	}
-	if (temp < 10)
-		ft_putchar_fd(temp + '0', fd);
 	else
 	{
-		ft_putnbr_fd(temp / 10, fd);
-		ft_putnbr_fd(temp % 10, fd);
+		while (num)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)source)[i];
+			i++;
+			num--;
+		}
 	}
+	return (dest);
 }
-
-/*
-int	main(void)
-{
-	ft_putnbr_fd(2147483647, 1); // DELETE MAIN
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 15:50:25 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/11 23:37:48 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 00:09:15 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putendl_fd(char *s, int fd)
 	int	counter;
 
 	counter = 0;
-	while(s[counter])
+	while (s[counter])
 	{
 		ft_putchar_fd(s[counter], fd);
 		counter++;

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 09:57:38 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/07/11 08:11:01 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/20 15:46:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
-	if (nmemb == 0 || size == 0)
-		return (0);
 	p = malloc(nmemb * size);
+	if (!p)
+		return (NULL);
 	ft_bzero(p, nmemb * size);
 	return (p);
 }

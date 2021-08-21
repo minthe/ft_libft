@@ -6,9 +6,13 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:40:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/21 00:04:43 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/21 12:43:13 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* The memmove() function copies len bytes from string src to string dst.
+The two strings may overlap; the copy is always done in a non-destructive manner.
+The memmove() function returns the original value of dst. */
 
 #include "libft.h"
 

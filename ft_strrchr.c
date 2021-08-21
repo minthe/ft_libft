@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/21 01:22:09 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/21 11:40:39 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2021/08/21 13:17:22 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2021/08/21 13:33:46 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The memchr() function locates the first occurrence of c
-(converted to an unsigned char) in string s.
-The memchr() function returns a pointer to the byte located,
-or NULL if no such byte exists within n bytes. */
-
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+/* The strrchr() function is identical to strchr(),
+except it locates the last occurrence of c. */
+
+char	*ft_strrchr(const char *s, int c)
 {
-	while (n--)
+	char	*temp;
+
+	temp = NULL;
+	while (*s != '\0')
 	{
-		if ((*(unsigned char *)s) == (unsigned char)c)
-			return (void *)s;
+		if (*s == c)
+			temp = (char *)s;
 		s++;
 	}
-	return (NULL);
+	if (c == 0)
+		return ((char *)s);
+	return (temp);
 }

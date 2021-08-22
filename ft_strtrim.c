@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 14:07:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/22 15:36:09 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2021/08/22 15:43:28 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2021/08/22 16:55:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Allocates (with malloc(3)) and returns a new string,
-which is the result of the concatenation of ’s1’ and ’s2’.
-
-Return: The new string. NULL if the allocation fails. */
-
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new;
+	size_t	i;
+	size_t	j;
 	size_t	len;
+	char	*new;
 
-	if (!s1 || !s2)
+	i = 0;
+	len = ft_strlen(s1);
+	j = len;
+	if (!s1 || !set || !ft_strlen(set))
 		return (NULL);
-	len = (ft_strlen(s1) + (ft_strlen(s2)));
-	new = (char *)malloc(sizeof(char) * (len + 1));
+	while (ft_strchr(set, s1[i]) && s1[i])
+		i++;
+	while (ft_strchr(set, s1[j - 1]) && (j > i))
+		j--;
+	new = (char *)malloc(sizeof(char) * (j - i + 1));
 	if (!new)
 		return (NULL);
-	ft_strlcpy(new, s1, len);
-	ft_strlcat(new, s2, (len + 1));
+	ft_strlcpy(new, (s1 + i), (j - i + 1));
 	return (new);
 }

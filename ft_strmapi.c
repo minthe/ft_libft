@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 14:07:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/22 15:36:09 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2021/08/22 16:55:54 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2021/08/22 17:18:36 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Allocates (with malloc(3)) and returns a new string,
-which is the result of the concatenation of ’s1’ and ’s2’.
-
-Return: The new string. NULL if the allocation fails. */
-
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*new;
-	size_t	len;
+	unsigned int	index;
+	char			*new;
 
-	if (!s1 || !s2)
-		return (NULL);
-	len = (ft_strlen(s1) + (ft_strlen(s2)));
-	new = (char *)malloc(sizeof(char) * (len + 1));
+	index = 0;
+	if (!f || !s)
+		return (0);
+	new = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!new)
 		return (NULL);
-	ft_strlcpy(new, s1, len);
-	ft_strlcat(new, s2, (len + 1));
+	while (s[index] != '\0')
+	{
+		new[index] = f(index, s[index]);
+		index++;
+	}
+	new[index] = '\0';
 	return (new);
 }

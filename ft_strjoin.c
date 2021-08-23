@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 14:07:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/22 15:36:09 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/23 17:12:04 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = (ft_strlen(s1) + (ft_strlen(s2)));
-	new = (char *)malloc(sizeof(char) * (len + 1));
+	len = (ft_strlen(s1) + (ft_strlen(s2))) + 1;
+	new = (char *)ft_calloc(sizeof(char), len);
 	if (!new)
 		return (NULL);
 	ft_strlcpy(new, s1, len);
-	ft_strlcat(new, s2, (len + 1));
+	ft_strlcat(new, s2, len);
 	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 14:35:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/22 15:35:21 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/23 16:46:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	sub = (char *)malloc(sizeof(char) * (len + 1));
+	sub = (char *)ft_calloc(sizeof(char), (len + 1));
 	if (!sub)
 		return (NULL);
 	if (start >= ft_strlen(s))

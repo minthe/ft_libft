@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:42:08 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/23 17:31:46 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/23 17:55:52 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(temp % 10, fd);
 	}
 }
-
-/*
-int	main(void)
-{
-	ft_putnbr_fd(2147483647, 1); // DELETE MAIN
-	return (0);
-}
-*/

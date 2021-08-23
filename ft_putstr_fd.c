@@ -6,14 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 12:23:10 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/23 17:25:11 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/23 17:56:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Outputs the string ’s’ to the given file descriptor.
-*/
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -28,11 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		counter++;
 	}
 }
-
-/*
-int	main(void)
-{
-	ft_putstr_fd("hello", 1); // DELETE MAIN
-	return(0);
-}
-*/

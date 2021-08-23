@@ -6,9 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 08:01:09 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/21 00:06:14 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/23 17:57:04 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

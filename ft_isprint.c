@@ -6,11 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 17:13:00 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/21 00:07:39 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2021/08/23 17:55:09 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* checks for any printable character including space. */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -19,22 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/*
-
-#include <stdio.h>
-
-int	main(void)
-{
-	int	temp; // DELETE MAIN
-	temp = 55;
-	printf("%d \n", temp);
-	temp = ft_isprint(-7278);
-	printf("out: %d \n", temp);
-	temp = ft_isprint(125);
-	printf("125: %d \n", temp);
-	temp = ft_isprint(0);
-	printf("0: %d \n", temp);
-	return (0);
-}
-*/

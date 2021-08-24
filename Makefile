@@ -1,4 +1,4 @@
-SRCS		=	ft_bzero.c \
+SRCS	=	ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -33,7 +33,7 @@ SRCS		=	ft_bzero.c \
 			ft_itoa.c \
 			ft_split.c \
 
-SRCS_B = ft_lstnew.c \
+SRCS_B	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -56,7 +56,7 @@ bonus:			$(OBJS) $(OBJS_B)
 				ar rcs $(NAME) $(OBJS) $(OBJS_B)
 				$(RM) $(OBJS) $(OBJS_B)
 
-%.o: 			%.c	$(HEADER_FILES)
+%.o:			%.c	$(HEADER_FILES)
 				$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:

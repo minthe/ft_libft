@@ -48,13 +48,11 @@ CFLAGS			=	-Wall -Werror -Wextra
 
 all:			$(NAME)
 
-$(NAME):		$(OBJS) $(OBJS_B)
-				ar rcs $(NAME) $(OBJS) $(OBJS_B)
-				$(RM) $(OBJS) $(OBJS_B)
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
 
 bonus:			$(OBJS) $(OBJS_B)
 				ar rcs $(NAME) $(OBJS) $(OBJS_B)
-				$(RM) $(OBJS) $(OBJS_B)
 
 %.o:			%.c	$(HEADER_FILES)
 				$(CC) -c $(CFLAGS) -o $@ $<

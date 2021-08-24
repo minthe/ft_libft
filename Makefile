@@ -36,15 +36,26 @@ SRC		=	ft_bzero.c \
 			ft_itoa.c \
 			ft_split.c \
 
+SRC_BONUS = ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+
 OBJS = ${SRC:.c=.o}
+
+OBJS_BONUS = ${SRC_BONUS:.c=.o}
 
 all: $(NAME)
 
 $(NAME) : ${OBJS}	$(HEADER)
 	ar rcs $(NAME)	${OBJS}
 
+bonus: ${OBJS_BONUS}	${HEADER}
+	ar rcs ${NAME}	${OBJS_BONUS}
+
 clean:
 	rm -f ${OBJS}
+	rm -f ${OBJS_BONUS}
 
 fclean: clean
 	rm -f $(NAME)

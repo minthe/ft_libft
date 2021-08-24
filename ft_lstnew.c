@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 15:43:28 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/24 22:11:32 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2021/08/24 17:21:21 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2021/08/24 18:18:20 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
-	size_t	j;
-	char	*new;
+	t_list	*tmp;
 
-	new = NULL;
-	if (s1 != NULL && set != NULL)
+	tmp = malloc(sizeof(t_list));
+	if (tmp)
 	{
-		i = 0;
-		j = ft_strlen(s1);
-		while (s1[i] && ft_strchr(set, s1[i]))
-			i++;
-		while (s1[j - 1] && ft_strrchr(set, s1[j - 1]) && j > i)
-			j--;
-		new = (char *)malloc(sizeof(char) * (j - i + 1));
-		if (new)
-			ft_strlcpy(new, &s1[i], j - i + 1);
+		tmp->content = content;
+		tmp->next = NULL;
 	}
-	return (new);
+	return (tmp);
 }

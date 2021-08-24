@@ -1,7 +1,4 @@
-CFLAGS	=	-Wall -Wextra -Werror
-NAME	=	libft.a
-HEADER	=	libft.h
-SRC		=	ft_bzero.c \
+SRCS		=	ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -36,28 +33,38 @@ SRC		=	ft_bzero.c \
 			ft_itoa.c \
 			ft_split.c \
 
-SRC_BONUS = ft_lstnew.c \
+SRCS_B = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
 
-OBJS = ${SRC:.c=.o}
+OBJS			=	${SRCS:.c=.o}
+OBJS_B			=	${SRCS_B:.c=.o}
+HEADER_FILES	=	libft.h
+NAME			=	libft.a
+CC				=	gcc
+RM				=	rm -f
+CFLAGS			=	-Wall -Werror -Wextra
 
-OBJS_BONUS = ${SRC_BONUS:.c=.o}
+all:			$(NAME)
 
-all: $(NAME)
+$(NAME):		$(OBJS) $(OBJS_B)
+				ar rcs $(NAME) $(OBJS) $(OBJS_B)
+				$(RM) $(OBJS) $(OBJS_B)
 
-$(NAME) : ${OBJS}	$(HEADER)
-	ar rcs $(NAME)	${OBJS}
+bonus:			$(OBJS) $(OBJS_B)
+				ar rcs $(NAME) $(OBJS) $(OBJS_B)
+				$(RM) $(OBJS) $(OBJS_B)
 
-bonus: ${OBJS_BONUS}	${HEADER}
-	ar rcs ${NAME}	${OBJS_BONUS}
+%.o: 			%.c	$(HEADER_FILES)
+				$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f ${OBJS}
-	rm -f ${OBJS_BONUS}
+				$(RM) $(OBJS) $(OBJS_B)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re: fclean all
+re:				fclean all
+
+.PHONY:			all %.o clean fcloean re bonus

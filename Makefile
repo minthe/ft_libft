@@ -36,6 +36,7 @@ SRCS		=	ft_bzero.c \
 SRCS_B = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
+			ft_lstlast.c \
 
 OBJS			=	${SRCS:.c=.o}
 OBJS_B			=	${SRCS_B:.c=.o}

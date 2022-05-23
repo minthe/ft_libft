@@ -58,6 +58,9 @@ bonus:			$(OBJS) $(OBJS_B)
 				$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
+				$(RM) $(OBJS)
+
+cleanb:
 				$(RM) $(OBJS) $(OBJS_B)
 
 fclean:			clean

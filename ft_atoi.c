@@ -6,12 +6,13 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 09:20:50 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2022/05/22 13:19:27 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2022/06/03 17:18:25 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// checks if character is a space
 static int	ft_isspace(int c)
 {
 	if ((c > 8 && c < 14) || (c == ' '))
@@ -20,6 +21,7 @@ static int	ft_isspace(int c)
 		return (0);
 }
 
+// takes a string and converts it into an integer
 int	ft_atoi(const char *str)
 {
 	int	sign;

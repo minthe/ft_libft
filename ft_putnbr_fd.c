@@ -6,12 +6,13 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:42:08 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2021/08/23 17:55:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2022/06/03 17:14:06 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// prints integer to specified fd
 void	ft_putnbr_fd(int n, int fd)
 {
 	int	temp;
